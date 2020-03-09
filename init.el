@@ -29,7 +29,7 @@
  '(fancy-splash-image nil)
  '(package-selected-packages
    (quote
-    (random-splash-image yasnippet auto-complete-c-headers))))
+    (quack cyberpunk-theme random-splash-image yasnippet auto-complete-c-headers))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -41,9 +41,16 @@
 ;(setq random-splash-image-dir (concat (getenv "HOME") "/.emacs.d/splash-images"))
 ;(random-splash-image-set)
 ;(setq fancy-splash-image (create-image "~/gg.gif")
-(setq inhibit-startup-screen t)
+;(setq inhibit-startup-screen t)
 ;(insert-image (create-image "~/gg.gif"))
 
 ;; my elisp :) :) :)
 (when (version<= "26.0.50" emacs-version )
   (global-display-line-numbers-mode))
+(load-theme 'cyberpunk t)
+(set-frame-parameter (selected-frame) 'alpha '(93 93))
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq make-backup-files nil)
+;(setq tab-width 4)
